@@ -1,41 +1,88 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>配置 | packing</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/images/favicon.png"><link rel="stylesheet" href="/css/packingjs.css"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.4/es6-shim.min.js"></script></head><body><div class="container"><div class="nav-main"><div class="wrap"><a class="nav-home" href="/"><img src="/images/favicon.png" alt="packing logo">packing</a><div class="nav-site-wrapper"><ul class="nav-site nav-site-internal"><li><a href="/docs/getting-started.html" class="active" data-target=".nav-docs">文档</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/packingjs" class="">GitHub</a></li><li><a href="https://qails.github.io" class="">Qails</a></li></ul></div></div></div><section class="content wrap documentationContent"><div class="nav-docs"><div class="nav-docs-viewport"><div class="nav-docs-section"><h3>基础知识</h3><ul><li><a style="margin-left:10px;" class="" href="/docs/getting-started.html#content">概述</a></li><li><a style="margin-left:10px;" class="" href="/docs/installation.html#content">安装</a></li><li><a style="margin-left:10px;" class="" href="/docs/commands.html#content">命令</a></li><li><a style="margin-left:10px;" class="active" href="/docs/configuration.html#content">配置</a></li><li><a style="margin-left:10px;" class="" href="/docs/build.html#content">编译</a></li></ul></div><div class="nav-docs-section"><h3>使用指南</h3><ul><li><a style="margin-left:10px;" class="" href="/docs/router.html#content">路由</a></li><li><a style="margin-left:10px;" class="" href="/docs/mock.html#content">数据模拟</a></li><li><a style="margin-left:10px;" class="" href="/docs/vender.html#content">vender</a></li><li><a style="margin-left:10px;" class="" href="/docs/profiles.html#content">profiles</a></li><li><a style="margin-left:10px;" class="" href="/docs/eslint.html#content">eslint</a></li><li><a style="margin-left:10px;" class="" href="/docs/es6.html#content">用 ES6 开发</a></li><li><a style="margin-left:10px;" class="" href="/docs/static.html#content">引用静态资源</a></li><li><a style="margin-left:10px;" class="" href="/docs/jenkins.html#content">用 Jenkins 发布</a></li><li><a style="margin-left:10px;" class="" href="/docs/migrating-v2.html#content">升级到 v2</a></li><li><a style="margin-left:10px;" class="" href="/docs/change-log.html#content">Chanagelog</a></li></ul></div><div class="nav-docs-section"><h3>常见问题</h3><ul><li><a style="margin-left:10px;" class="" href="/docs/webpack-jsonp.html#content">找不到 webpackJsonp</a></li><li><a style="margin-left:10px;" class="" href="/docs/webpack-require.html#content">__webpack_require__ 未定义</a></li><li><a style="margin-left:10px;" class="" href="/docs/dev-dependencies.html#content">编译机上找不到某些依赖包</a></li><li><a style="margin-left:10px;" class="" href="/docs/build-css.html#content">单独编译 less</a></li><li><a style="margin-left:10px;" class="" href="/docs/npm-cache.html#content">npm-cache 解压失败</a></li></ul></div></div></div><div class="inner-content"><a id="content"></a><h1>配置</h1><div><p>为了简化使用门槛，packing 隐藏了很多 webpack 配置，内置了一些常用的 loader 和 plugin，工程师甚至可以不做任何配置就能使用 packing。</p><p>packing 中有2种配置文件：</p><ul><li>一种是 packing 配置文件，用来控制项目的配置。</li><li>一种是 webpack 配置文件，用来控制 webpack。</li></ul><h2><a class="anchor" name="packing"></a>packing 配置文件 <a class="hash-link" href="#packing">#</a></h2><p>packing 配置文件是一个对象(configuration object)。</p><p><a href="https://github.com/packingjs/packing/blob/master/src/config/packing.js" target="_blank">查看 packing 默认的配置项</a></p><p>修改项目根目录下的 <code>config/packing.js</code> (如果没有你需要新建一个)文件可以覆盖 packing 默认配置。</p><pre class="prism language-javascript">
-<span class="token comment" spellcheck="true">/**
- * 演示修改项目模版为 pug 模版
- *
- * @param object packing 默认配置对象
- */</span>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>配置 | Qails</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/images/favicon.png"><link rel="stylesheet" href="/css/qails.css"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.4/es6-shim.min.js"></script></head><body><div class="container"><div class="nav-main"><div class="wrap"><a class="nav-home" href="/"><img src="/images/qails-logo-white.png" alt="qails logo">Qails</a><div class="nav-site-wrapper"><ul class="nav-site nav-site-internal"><li><a href="/docs/getting-started.html" class="active" data-target=".nav-docs">文档</a></li></ul><ul class="nav-site nav-site-external"><li><a href="https://github.com/qails" class="">GitHub</a></li><li><a href="https://packingjs.github.io" class="">Packing</a></li></ul></div></div></div><section class="content wrap documentationContent"><div class="nav-docs"><div class="nav-docs-viewport"><div class="nav-docs-section"><h3>基础知识</h3><ul><li><a style="margin-left:10px;" class="" href="/docs/getting-started.html#content">概述</a></li><li><a style="margin-left:10px;" class="" href="/docs/installation.html#content">安装</a></li><li><a style="margin-left:10px;" class="" href="/docs/commands.html#content">命令</a></li><li><a style="margin-left:10px;" class="active" href="/docs/configuration.html#content">配置</a></li></ul></div><div class="nav-docs-section"><h3>使用指南</h3><ul><li><a style="margin-left:10px;" class="" href="/docs/router.html#content">路由</a></li><li><a style="margin-left:10px;" class="" href="/docs/orm.html#content">ORM</a></li><li><a style="margin-left:10px;" class="" href="/docs/rest.html#content">RESTful API</a></li><li><a style="margin-left:10px;" class="" href="/docs/profiles.html#content">profiles</a></li><li><a style="margin-left:10px;" class="" href="/docs/jenkins.html#content">用 Jenkins 发布</a></li><li><a style="margin-left:10px;" class="" href="/docs/change-log.html#content">Chanagelog</a></li></ul></div></div></div><div class="inner-content"><a id="content"></a><h1>配置</h1><div><p>Qails 使用 <a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a> 做工程配置管理，dotenv 只支持字符串类型变量，如果代码中需要布尔型的开关变量，使用时必须做字符串比较，如</p><pre class="prism language-javascript">
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>ENABLE <span class="token operator">===</span> <span class="token string">&#x27;true&#x27;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true"> // do something
+</span><span class="token punctuation">}</span></pre><p>工程初始化的通用配置项如下：</p><pre class="prism language-javascript">
+# 环境变量
+NODE_ENV<span class="token operator">=</span>local
 
-<span class="token comment" spellcheck="true">/**
- * @param {Object} packing packing默认配置对象
- * @return {Object}
- */</span>
-export default <span class="token punctuation">(</span>packing<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-  const p <span class="token operator">=</span> packing<span class="token punctuation">;</span>
- <span class="token comment" spellcheck="true"> // 模版引擎类型
-</span>  p<span class="token punctuation">.</span>templateEngine <span class="token operator">=</span> <span class="token string">&#x27;pug&#x27;</span><span class="token punctuation">;</span>
- <span class="token comment" spellcheck="true"> // 模版文件扩展名
-</span>  p<span class="token punctuation">.</span>templateExtension <span class="token operator">=</span> <span class="token string">&#x27;.pug&#x27;</span><span class="token punctuation">;</span>
+# API服务端口
+PORT<span class="token operator">=</span><span class="token number">3000</span>
 
-  <span class="token keyword">return</span> p<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></pre><h2><a class="anchor" name="webpack"></a>webpack 配置文件 <a class="hash-link" href="#webpack">#</a></h2><p>webpack 有3个配置文件</p><ul><li>开发环境 webpack 配置 <a href="https://github.com/packingjs/packing/blob/master/src/config/webpack.serve.babel.js" target="_blank">webpack.serve.babel.js</a></li><li>生产环境 webpack 配置 <a href="https://github.com/packingjs/packing/blob/master/src/config/webpack.build.babel.js" target="_blank">webpack.build.babel.js</a></li><li>开发环境打包 <a href="https://webpack.js.org/plugins/dll-plugin/" target="_blank">Dll</a> 配置 <a href="https://github.com/packingjs/packing/blob/master/src/config/webpack.dll.babel.js" target="_blank">webpack.dll.babel.js</a></li></ul><p>通常来说，如果不是新增了 loader 或 plugins，一般不需要修改 <code>webpack.dll.babel.js</code>。</p><p>如果默认配置满足不了你的要求，你也可以编写自己的配置文件来覆盖默认配置。配置文件使用很方便，它自动继承了默认配置，可以通过自定义配置来完全控制所有 webpack 功能。</p><pre class="prism language-javascript">
-<span class="token comment" spellcheck="true">/**
- * 演示修改 webpack 默认配置的 output 值 *
- */</span>
+# 执行代码目录地址<span class="token punctuation">[</span>本地开发为src，其它环境均为dist<span class="token punctuation">]</span>
+DOCUMENT_ROOT<span class="token operator">=</span>src
 
- <span class="token comment" spellcheck="true">/**
-  * @param {Object} webpackConfig 默认配置对象
-  * @return {Object} 符合 webpack 配置规范的对象
-  */</span>
-export default <span class="token punctuation">(</span>webpackConfig<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-  const config <span class="token operator">=</span> webpackConfig<span class="token punctuation">;</span>
- <span class="token comment" spellcheck="true"> // lib文件输出名称
-</span>  config<span class="token punctuation">.</span>output<span class="token punctuation">.</span>filename <span class="token operator">=</span> <span class="token string">&#x27;abc.js&#x27;</span><span class="token punctuation">;</span>
+# 日志文件存放目录
+LOG_ROOT<span class="token operator">=</span>logs
 
- <span class="token comment" spellcheck="true"> // lib暴露在 window 下的名称
-</span>  config<span class="token punctuation">.</span>output<span class="token punctuation">.</span>library <span class="token operator">=</span> <span class="token string">&#x27;ABC&#x27;</span><span class="token punctuation">;</span>
+# 是否输出带格式化的json
+JSON_PRETTY<span class="token operator">=</span><span class="token boolean">true</span>
 
- <span class="token comment" spellcheck="true"> // 打包方式，一般不需要修改
-</span> <span class="token comment" spellcheck="true"> // 详细文档请看 https://webpack.js.org/configuration/output/#output-librarytarget
-</span>  config<span class="token punctuation">.</span>output<span class="token punctuation">.</span>libraryTarget <span class="token operator">=</span> <span class="token string">&#x27;umd&#x27;</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> config<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span></pre><p><a href="https://webpack.js.org/configuration/" target="_blank">查看更多 webpack 详细配置信息</a></p></div><div class="docs-prevnext"><a class="docs-next" href="build.html#content">Next →</a></div><p class="edit-page-block">如果你发现文档存在错误，请<a target="_blank" href="https://github.com/packingjs/packing/issues">在 GitHub 提个 issue</a> 告诉我们。</p></div></section><footer class="nav-footer"><a href="https://packingjs.github.io" target="_blank" class="fbOpenSource"><img src="/images/favicon.png" alt="Packing" width="45" height="45"></a><section class="copyright">Copyright © 2017 Packingjs Team.</section></footer></div><div id="fb-root"></div><script src="/js/scripts.js"></script></body></html>
+# 是否启动 session
+SESSION_ENABLE<span class="token operator">=</span><span class="token boolean">false</span>
+
+# 是否启用NODE对安全证书的验证<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span>禁用<span class="token operator">/</span><span class="token number">1</span><span class="token punctuation">:</span>启用<span class="token punctuation">]</span>
+NODE_TLS_REJECT_UNAUTHORIZED<span class="token operator">=</span><span class="token number">0</span>
+
+## knex
+# knex调试开关
+DEBUG<span class="token operator">=</span>knex<span class="token punctuation">:</span>query
+# knex客户端类型
+KNEX_CLIENT<span class="token operator">=</span>mysql
+
+## mysql
+# mysql服务器地址
+MYSQL_HOST<span class="token operator">=</span>localhost
+# mysql用户名
+MYSQL_USER<span class="token operator">=</span>root
+# mysql密码
+MYSQL_PASSWORD<span class="token operator">=</span>
+# mysql数据库名
+MYSQL_DATABASE<span class="token operator">=</span>test
+# mysql端口
+MYSQL_PORT<span class="token operator">=</span><span class="token number">3306</span>
+
+## PM2
+PM2_EXEC_INTERPRETER<span class="token operator">=</span>babel<span class="token operator">-</span>node
+PM2_EXEC_MODE<span class="token operator">=</span>fork
+PM2_INSTANCES<span class="token operator">=</span><span class="token number">1</span>
+PM2_WATCH<span class="token operator">=</span><span class="token boolean">true</span>
+
+## watcher
+# 是否使用watcher监控
+WATCHER_ENABLE<span class="token operator">=</span><span class="token boolean">false</span>
+# watcher服务信息
+WATCHER_HOST<span class="token operator">=</span>
+WATCHER_PORT<span class="token operator">=</span>
+WATCHER_PREFIX<span class="token operator">=</span>
+
+## cors
+# 是否允许前端跨域请求开关
+CORS_ENABLE<span class="token operator">=</span><span class="token boolean">true</span>
+# 允许跨域的域名，多个用英文逗号连接，<span class="token operator">*</span>表示允许所有域名
+CORS_ORIGIN<span class="token operator">=</span><span class="token operator">*</span>
+# 支持的HTTP请求动作类型，多个用英文逗号连接
+CORS_ALLOW_METHODS<span class="token operator">=</span>GET
+
+## pug
+# 是否使用pug模版
+PUG_ENABLE<span class="token operator">=</span><span class="token boolean">true</span>
+# pug模版位置
+PUG_PAGES_PATH<span class="token operator">=</span>src<span class="token operator">/</span>templates<span class="token operator">/</span>pages
+
+## model 特性配置
+# 让 Model 具有返回虚拟字段的功能
+MODEL_VIRTUALS＝<span class="token boolean">false</span>
+# 让 Model 调用 toJSON 方法时具有显示／隐藏某些字段的功能
+MODEL_VISIBILITY＝<span class="token boolean">false</span>
+# 让 Model 具有分页功能
+MODEL_PAGINATION＝<span class="token boolean">false</span>
+# 让 Model 具有删除关联数据功能
+MODEL_CASCADEDELETE＝<span class="token boolean">false</span>
+# 让 Model 具有返回自定义字段的功能
+MODEL_MASK＝<span class="token boolean">false</span>
+# 让 Model 具有自动生成UUID的功能
+MODEL_UUID＝<span class="token boolean">false</span>
+#让 Model 具有自动存储序列化对象的能力
+MODEL_JSONCOLUMNS＝<span class="token boolean">false</span>
+# 让 Model 具有自动转换对象 key 拼写的能力
+MODEL_MAGICCASE＝<span class="token boolean">false</span></pre></div><div class="docs-prevnext"><a class="docs-next" href="router.html#content">Next →</a></div><p class="edit-page-block">如果你发现文档存在错误，请<a target="_blank" href="https://github.com/qails/qails/issues">在 GitHub 提个 issue</a> 告诉我们。</p></div></section><footer class="nav-footer"><a href="https://qails.github.io" target="_blank" class="fbOpenSource"><img src="/images/qails-logo-white.png" alt="qails" width="45" height="45"></a><section class="copyright">Copyright © 2017 Qails Team.</section></footer></div><div id="fb-root"></div><script src="/js/scripts.js"></script></body></html>
